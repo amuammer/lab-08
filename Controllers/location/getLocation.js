@@ -6,6 +6,7 @@ exports.default = (req, res, next) => {
   try {
     if (!city) throw new Error();
     else if (!isNaN(city)) throw new Error();
+
     Location.findByName(city, function (result) {
       if (result) {
         let locationData = new Location(city, result.rows);
