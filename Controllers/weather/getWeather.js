@@ -18,8 +18,6 @@ exports.default = (req, res, next) => {
 }
 
 function getWeather(city, callback) {
-  Weather.all = [];
-
   let WEATHER_API_KEY = process.env.WEATHER_API_KEY;
   let url = `https://api.weatherbit.io/v2.0/forecast/daily?city=${city}&key=${WEATHER_API_KEY}`;
 

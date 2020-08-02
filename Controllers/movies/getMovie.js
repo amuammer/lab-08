@@ -11,7 +11,6 @@ exports.default = (req, res) => {
 }
 
 function getMoviesFromAPI(region_code, callback) {
-  Movie.all = [];
   const APIKEY = process.env.MOVIE_API_KEY;
   let url = `https://api.themoviedb.org/3/discover/movie?api_key=${APIKEY}&region=${region_code}`;
   axios.get(url).then(data => {
