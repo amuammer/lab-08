@@ -11,6 +11,7 @@ const locationRouter = require("./Routers/location").default;
 const weatherRouter = require("./Routers/weather").default;
 const trailsRouter = require("./Routers/trails").default;
 const moviesRouter = require("./Routers/movies").default;
+const yelpRouter = require("./Routers/yelp").default;
 
 // cors origin
 app.all("*", (req, res, next) => {
@@ -38,6 +39,7 @@ app.use("/location", locationRouter);
 app.use("/weather", weatherRouter);
 app.use("/trails", trailsRouter);
 app.use("/movies", moviesRouter);
+app.use("/yelp", yelpRouter);
 
 // page not found middleware
 app.all("*", (req, res) => {
