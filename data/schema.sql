@@ -1,9 +1,10 @@
 CREATE TABLE IF NOT EXISTS
 locations (
   search_query VARCHAR(80) PRIMARY KEY NOT NULL,
-  display_name VARCHAR(80) NOT NULL,
+  display_name VARCHAR(1000) NOT NULL,
   lat VARCHAR(25) NOT NULL,
-  lon VARCHAR(25) NOT NULL
+  lon VARCHAR(25) NOT NULL,
+  country_code VARCHAR(2) NOT NULL;
 );
 
 CREATE TABLE IF NOT EXISTS
@@ -29,3 +30,7 @@ trails (
   condition_time VARCHAR(10) NOT NULL,
   PRIMARY KEY (latitude, longitude)
 );
+
+
+## alter table locations add column country_code varchar(2) not null;
+## alter table locations alter column display_name type varchar(1000);

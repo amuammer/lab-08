@@ -12,9 +12,6 @@ function Trails(data) {
     hour: "numeric",
     minute: "numeric",
     second: "numeric"});
-  Trails.all.push(this);
 }
-Trails.all = [];
-
 
 exports.default = Trails;
